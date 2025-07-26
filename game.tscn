@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2ar7y1vaqw1b"]
+[gd_scene load_steps=6 format=3 uid="uid://c2ar7y1vaqw1b"]
 
 [ext_resource type="PackedScene" uid="uid://gl1cf41av64a" path="res://fruits/bucket.tscn" id="1_e2o6t"]
-[ext_resource type="Script" uid="uid://ba5utjfajrfpf" path="res://game.gd" id="1_fc0e3"]
+[ext_resource type="Script" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://c8jeadyfdtgm1" path="res://player.tscn" id="4_7jktm"]
 [ext_resource type="Texture2D" uid="uid://bxwxc7bhs20ra" path="res://assets/background.png" id="5_7jktm"]
+[ext_resource type="AudioStream" uid="uid://dy7ghu1obsaal" path="res://assets/music/Late Night Radio.mp3" id="5_ryrav"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_fc0e3")
@@ -20,5 +21,10 @@ position = Vector2(159, 168)
 
 [node name="Player" parent="." instance=ExtResource("4_7jktm")]
 position = Vector2(154, -60)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ryrav")
+autoplay = true
+bus = &"Music"
 
 [connection signal="dropped_fruit" from="Player" to="." method="_on_player_dropped_fruit"]

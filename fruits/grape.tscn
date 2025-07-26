@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://8f84hgqsw4j6"]
 
 [ext_resource type="Script" uid="uid://cfwb28g467syv" path="res://fruits/grape.gd" id="1_j46mh"]
-[ext_resource type="Texture2D" uid="uid://dcds2x55cefv" path="res://assets/grape.png" id="1_lyd8r"]
+[ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="2_hxcjf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j46mh"]
 radius = 31.4006
@@ -11,7 +11,7 @@ script = ExtResource("1_j46mh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_lyd8r")
+texture = ExtResource("2_hxcjf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 4)
