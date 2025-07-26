@@ -202,4 +202,5 @@ expand_mode = 1
 script = ExtResource("11_0k4wn")
 
 [connection signal="pressed" from="VBoxContainer/Start_Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
