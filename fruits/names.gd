@@ -1,5 +1,4 @@
 extends Node
 class_name SUIKA
 
-
 enum FRUITS {CHERRY, GRAPE, LEMON, ORANGE, APPLE, PEAR, WATERMELON}
