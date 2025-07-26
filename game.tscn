@@ -1,17 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2ar7y1vaqw1b"]
+[gd_scene load_steps=7 format=3 uid="uid://c2ar7y1vaqw1b"]
 
 [ext_resource type="PackedScene" uid="uid://gl1cf41av64a" path="res://fruits/bucket.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://ba5utjfajrfpf" path="res://game.gd" id="1_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://d1f3qlv4e3b1m" path="res://assets/backgrounds/main_menu_background.png" id="2_7jktm"]
 [ext_resource type="PackedScene" uid="uid://c8jeadyfdtgm1" path="res://player.tscn" id="4_7jktm"]
-[ext_resource type="Texture2D" uid="uid://bxwxc7bhs20ra" path="res://assets/background.png" id="5_7jktm"]
 [ext_resource type="AudioStream" uid="uid://ycd8ef1lksco" path="res://assets/music/Pop.mp3" id="5_ryrav"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jktm"]
+bg_color = Color(0.909804, 0.952941, 0.905882, 0.513726)
+border_width_left = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_fc0e3")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(158, 170)
-texture = ExtResource("5_7jktm")
+texture = ExtResource("2_7jktm")
+
+[node name="Panel" type="Panel" parent="Background"]
+offset_left = -311.0
+offset_top = -258.0
+offset_right = 257.0
+offset_bottom = 377.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7jktm")
 
 [node name="Bucket" parent="Background" instance=ExtResource("1_e2o6t")]
 position = Vector2(-158, -170)
