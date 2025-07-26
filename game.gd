@@ -22,6 +22,7 @@ func _spawn_fruit(pos, fruit_id):
 	_current_fruit.position = pos
 
 func _on_player_dropped_fruit(pos, fruit_id) -> void:
+	$drop_sfx.play()
 	_spawn_fruit(pos, fruit_id)
 	
 func _spawn_next_fruit(fruit_id, pos):
