@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://65utmpkst1cq"]
+
+[ext_resource type="AudioStream" uid="uid://dy7ghu1obsaal" path="res://assets/music/Late Night Radio.mp3" id="1_05ggv"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_05ggv")
+autoplay = true
+bus = &"Music"
