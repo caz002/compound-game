@@ -19,7 +19,7 @@ texture = ExtResource("1_06t4h")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06t4h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
-bg_color = Color(0.675721, 0.800632, 0.650764, 1)
+bg_color = Color(1, 1, 1, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -34,7 +34,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
-bg_color = Color(0.557038, 0.703477, 0.544758, 1)
+bg_color = Color(0.719238, 0.841074, 0.708252, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -74,6 +74,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7vrkn")
+tween_intensity = 1.2
+tween_duration = 0.3
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
