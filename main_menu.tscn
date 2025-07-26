@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cb3pvwkg5tx10"]
+[gd_scene load_steps=22 format=3 uid="uid://cb3pvwkg5tx10"]
 
 [ext_resource type="Texture2D" uid="uid://d1f3qlv4e3b1m" path="res://assets/backgrounds/main_menu_background.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://bauagtsudmh2i" path="res://main_menu.gd" id="1_7vrkn"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bhwwe655qd357" path="res://water_orb.gd" id="9_j5v2v"]
 [ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="10_0o4t1"]
 [ext_resource type="Script" uid="uid://bsl03yaq5xrbt" path="res://earth_orb.gd" id="11_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://cq36qcauo2o7v" path="res://assets/ui/Close.png" id="13_iotk1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
@@ -66,6 +67,30 @@ shadow_offset = Vector2(0, 3.41)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
 texture = ExtResource("4_jix8l")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w44g7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iotk1"]
+bg_color = Color(0.651537, 0.765499, 0.72897, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -77,7 +102,7 @@ script = ExtResource("1_7vrkn")
 tween_intensity = 1.2
 tween_duration = 0.3
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Background" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,7 +111,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MainButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -101,7 +126,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Start_Game" type="Button" parent="VBoxContainer"]
+[node name="Start_Game" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.368627, 0.490196, 0.454902, 1)
@@ -115,7 +140,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 text = "Start Game"
 
-[node name="Instructions" type="Button" parent="VBoxContainer"]
+[node name="Instructions" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.368627, 0.490196, 0.454902, 1)
@@ -129,7 +154,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 text = "How to Play"
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.368627, 0.490196, 0.454902, 1)
@@ -178,7 +203,7 @@ texture = ExtResource("9_dy7ct")
 expand_mode = 1
 script = ExtResource("9_j5v2v")
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Title" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -201,6 +226,94 @@ texture = ExtResource("10_0o4t1")
 expand_mode = 1
 script = ExtResource("11_0k4wn")
 
-[connection signal="pressed" from="VBoxContainer/Start_Game" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[node name="Popup_Overlay" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.0
+offset_top = -268.0
+offset_right = 499.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w44g7")
+
+[node name="Back" type="TextureButton" parent="Popup_Overlay"]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 48.0
+offset_right = 935.0
+offset_bottom = 86.0
+texture_normal = ExtResource("13_iotk1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Title" type="Label" parent="Popup_Overlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -206.0
+offset_right = 155.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_iotk1")
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Paragraph" type="Label" parent="Popup_Overlay"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -373.0
+offset_top = -534.0
+offset_right = 374.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/font_size = 32
+text = "Use WASD to move around.
+
+Press Space to drop an orb.
+
+Match 2 of the same orb to increase your score and the size of the orbs."
+autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup_Overlay"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 194.0
+offset_right = 910.0
+offset_bottom = 482.0
+theme_override_colors/default_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "Use [b]WASD[/b] to move around.
+
+Press [b]Space[/b] to drop an orb.
+
+Match 2 of the same orb to increase your score and the size of the orbs."
+
+[connection signal="pressed" from="MainButtons/Start_Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButtons/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="MainButtons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Popup_Overlay/Back" to="." method="_on_back_pressed"]
