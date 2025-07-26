@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="2_hxcjf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j46mh"]
-radius = 31.4006
+radius = 54.0093
 
 [node name="grape" type="RigidBody2D"]
 script = ExtResource("1_j46mh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -11)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_hxcjf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 4)
 shape = SubResource("CircleShape2D_j46mh")

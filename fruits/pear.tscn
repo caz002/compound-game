@@ -3,15 +3,15 @@
 [ext_resource type="Script" uid="uid://bye7ds0sca2pb" path="res://fruits/pear.gd" id="1_0eug2"]
 [ext_resource type="Texture2D" uid="uid://pg0p4yvmhe6a" path="res://assets/orbs/Stone.png" id="2_xc03u"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0eug2"]
-radius = 108.005
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc03u"]
+size = Vector2(180, 135)
 
 [node name="pear" type="RigidBody2D"]
 script = ExtResource("1_0eug2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -1)
-shape = SubResource("CircleShape2D_0eug2")
+position = Vector2(-4, 5.5)
+shape = SubResource("RectangleShape2D_xc03u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_xc03u")

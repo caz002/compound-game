@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bvflk2ywih56x" path="res://fruits/watermelon.gd" id="1_6apsg"]
 [ext_resource type="Texture2D" uid="uid://du7aa3fhb61nu" path="res://assets/orbs/Duck.png" id="2_qvslh"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6apsg"]
-radius = 140.228
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qvslh"]
+radius = 67.0
+height = 230.0
 
 [node name="watermelon" type="RigidBody2D"]
 script = ExtResource("1_6apsg")
@@ -14,4 +15,5 @@ rotation = -8.36357e-05
 texture = ExtResource("2_qvslh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_6apsg")
+position = Vector2(-12, -1)
+shape = SubResource("CapsuleShape2D_qvslh")
