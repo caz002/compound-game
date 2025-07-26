@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4gfoqdd3ysfg"]
+
+[ext_resource type="Texture2D" uid="uid://b1qnsi4oximwu" path="res://assets/lemon.png" id="1_wgtlm"]
+[ext_resource type="Script" uid="uid://vsj0lmlv2wp6" path="res://fruits/lemon.gd" id="1_yahxr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yahxr"]
+radius = 60.208
+
+[node name="lemon" type="RigidBody2D"]
+script = ExtResource("1_yahxr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wgtlm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_yahxr")

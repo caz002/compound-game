@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtgtgennhki7s"]
+
+[ext_resource type="Script" uid="uid://bye7ds0sca2pb" path="res://fruits/pear.gd" id="1_0eug2"]
+[ext_resource type="Texture2D" uid="uid://u8xcnhxyqdbt" path="res://assets/pear.png" id="1_jhvvf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0eug2"]
+radius = 108.005
+
+[node name="pear" type="RigidBody2D"]
+script = ExtResource("1_0eug2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_0eug2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jhvvf")

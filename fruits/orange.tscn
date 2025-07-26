@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhxu731i1q1i4"]
+
+[ext_resource type="Script" uid="uid://d1isddhj3v7fd" path="res://fruits/orange.gd" id="1_aoevm"]
+[ext_resource type="Texture2D" uid="uid://duafj0e7kxybm" path="res://assets/orange.png" id="1_vnrxy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aoevm"]
+radius = 78.0256
+
+[node name="orange" type="RigidBody2D"]
+script = ExtResource("1_aoevm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vnrxy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.0756716
+shape = SubResource("CircleShape2D_aoevm")
