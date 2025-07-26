@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cb3pvwkg5tx10"]
+[gd_scene load_steps=9 format=3 uid="uid://cb3pvwkg5tx10"]
 
 [ext_resource type="Texture2D" uid="uid://d1f3qlv4e3b1m" path="res://assets/backgrounds/main_menu_background.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://bauagtsudmh2i" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="AudioStream" uid="uid://dhqmbjcrug1lh" path="res://assets/music/button_click.mp3" id="3_fu7sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
@@ -98,6 +99,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 text = "Exit"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fu7sn")
+volume_db = 10.369
 
 [connection signal="pressed" from="VBoxContainer/Start_Game" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
