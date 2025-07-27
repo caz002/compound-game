@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://d275lytovdusq" path="res://ui_scripts/Score.gd" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dgnyfdf6tgy8n" path="res://ui_scenes/fail_zone.tscn" id="7_eow3j"]
 [ext_resource type="Script" uid="uid://bw5soeybu6qwr" path="res://ui_scripts/fail_bar.gd" id="8_j5wjh"]
-[ext_resource type="Script" uid="uid://dynmj2r4rmp5c" path="res://end_game_score_overlay.gd" id="9_hve3p"]
+[ext_resource type="Script" path="res://end_game_score_overlay.gd" id="9_hve3p"]
 [ext_resource type="Texture2D" uid="uid://2phhps6bfpa" path="res://assets/ui/You Lost! (1).png" id="10_mfdv2"]
 [ext_resource type="AudioStream" uid="uid://dhqmbjcrug1lh" path="res://assets/music/button_click.mp3" id="11_mfdv2"]
 

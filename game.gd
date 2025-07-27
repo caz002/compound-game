@@ -40,7 +40,7 @@ func _grow_two_orbs():
 	var orbs_in_group = get_tree().get_nodes_in_group("orbs").duplicate()
 	orbs_in_group.shuffle()
 
-	var num_to_grow = mini(2, orbs_in_group.size())
+	var num_to_grow = mini(3, orbs_in_group.size())
 
 	var grown_count = 0
 	for orb in orbs_in_group:
@@ -65,7 +65,7 @@ func _shrink_three_orbs():
 	var orbs_in_group = get_tree().get_nodes_in_group("orbs").duplicate()
 	orbs_in_group.shuffle()
 
-	var num_to_shrink = mini(3, orbs_in_group.size())
+	var num_to_shrink = mini(2, orbs_in_group.size())
 
 	var shrink_count = 0
 	for orb in orbs_in_group:
@@ -83,7 +83,7 @@ func _shrink_three_orbs():
 			orb.queue_free()
 			shrink_count += 1
 
-func _toss_all_orbs_upwards(toss_strength_min: float = 100.0, toss_strength_max: float = 100.0, horizontal_randomness: float = 50.0):
+func _toss_all_orbs_upwards(toss_strength_min: float = 100.0, toss_strength_max: float = 50.0, horizontal_randomness: float = 25.0):
 
 	var orbs_to_toss = get_tree().get_nodes_in_group("orbs").duplicate()
 

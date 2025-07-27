@@ -39,7 +39,7 @@ func _physics_process(_delta: float) -> void:
 					return
 				
 				if is_pair(fruit_id, body.fruit_id, Globals.FRUITS.GRAPE, Globals.FRUITS.ORANGE):
-					#earth_fire_combo.emit()
+					earth_fire_combo.emit()
 					return
 				if is_pair(fruit_id, body.fruit_id, Globals.FRUITS.GRAPE, Globals.FRUITS.APPLE):
 					earth_water_combo.emit()
