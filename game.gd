@@ -40,7 +40,7 @@ func _grow_two_orbs():
 	var orbs_in_group = get_tree().get_nodes_in_group("orbs").duplicate()
 	orbs_in_group.shuffle()
 
-	var num_to_grow = mini(3, orbs_in_group.size())
+	var num_to_grow = mini(2, orbs_in_group.size())
 
 	var grown_count = 0
 	for orb in orbs_in_group:
@@ -114,7 +114,8 @@ func _on_in_game_main_menu_pressed():
 	Globals.score = 0
 
 func _process(delta:float) -> void:
-	#btn_hovered(main_menu_button)
+	if is_instance_valid(main_menu_button) and main_menu_button.visible:
+		btn_hovered(main_menu_button)
 	btn_hovered(in_game_main_menu)
 func start_tween(object: Object, property: String, final_val : Variant, duration: float):
 	var tween = create_tween()
