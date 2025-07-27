@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c2ar7y1vaqw1b"]
+[gd_scene load_steps=21 format=3 uid="uid://c2ar7y1vaqw1b"]
 
 [ext_resource type="PackedScene" uid="uid://gl1cf41av64a" path="res://ui_scenes/bucket.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://ba5utjfajrfpf" path="res://game.gd" id="1_fc0e3"]
@@ -39,6 +39,25 @@ shadow_offset = Vector2(0, 3.41)
 [sub_resource type="LabelSettings" id="LabelSettings_ryrav"]
 font_size = 32
 font_color = Color(0.368627, 0.490196, 0.454902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfdv2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iotsf"]
+bg_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w44g7"]
 bg_color = Color(1, 1, 1, 1)
@@ -114,9 +133,9 @@ stream = ExtResource("5_ryrav")
 volume_db = 15.904
 
 [node name="Score" type="Label" parent="."]
-offset_left = 615.0
+offset_left = 616.0
 offset_top = -248.0
-offset_right = 909.0
+offset_right = 910.0
 offset_bottom = -160.0
 theme_override_colors/font_color = Color(0.368627, 0.490196, 0.454902, 1)
 theme_override_font_sizes/font_size = 32
@@ -134,7 +153,12 @@ offset_left = -598.0
 offset_top = 508.0
 offset_right = -213.0
 offset_bottom = 562.0
+theme_override_colors/font_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/background = SubResource("StyleBoxFlat_mfdv2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iotsf")
 max_value = 4.0
+show_percentage = false
 script = ExtResource("8_j5wjh")
 
 [node name="Fail_Popup" type="Panel" parent="."]
