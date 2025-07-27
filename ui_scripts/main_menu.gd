@@ -21,6 +21,7 @@ func _process(delta:float) -> void:
 
 func _on_start_pressed():
 	$Click.play()
+	Globals.FAIL = false
 	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://game.tscn")
 
