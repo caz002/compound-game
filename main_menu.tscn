@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cb3pvwkg5tx10"]
+[gd_scene load_steps=23 format=3 uid="uid://cb3pvwkg5tx10"]
 
 [ext_resource type="Texture2D" uid="uid://d1f3qlv4e3b1m" path="res://assets/backgrounds/main_menu_background.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://bauagtsudmh2i" path="res://main_menu.gd" id="1_7vrkn"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="10_0o4t1"]
 [ext_resource type="Script" uid="uid://bsl03yaq5xrbt" path="res://earth_orb.gd" id="11_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://cq36qcauo2o7v" path="res://assets/ui/Close.png" id="13_iotk1"]
+[ext_resource type="Texture2D" uid="uid://bh5gebhcm4hqc" path="res://assets/ui/BulletPoint.png" id="13_w44g7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
@@ -233,9 +234,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -499.0
+offset_left = -497.0
 offset_top = -268.0
-offset_right = 499.0
+offset_right = 501.0
 offset_bottom = 268.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -294,12 +295,28 @@ Press Space to drop an orb.
 Match 2 of the same orb to increase your score and the size of the orbs."
 autowrap_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Popup_Overlay"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup_Overlay"]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 194.0
-offset_right = 910.0
-offset_bottom = 482.0
+offset_left = 96.0
+offset_top = 208.0
+offset_right = 866.0
+offset_bottom = 458.0
+theme_override_constants/separation = 50
+
+[node name="Instruction1" type="BoxContainer" parent="Popup_Overlay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Bullet1" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction1"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("13_w44g7")
+expand_mode = 1
+
+[node name="BulletText1" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction1"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 theme_override_colors/default_color = Color(0.462745, 0.592157, 0.552941, 1)
 theme_override_font_sizes/bold_italics_font_size = 32
 theme_override_font_sizes/italics_font_size = 32
@@ -307,11 +324,52 @@ theme_override_font_sizes/mono_font_size = 32
 theme_override_font_sizes/normal_font_size = 32
 theme_override_font_sizes/bold_font_size = 32
 bbcode_enabled = true
-text = "Use [b]WASD[/b] to move around.
+text = "Use [b]WASD[/b] to move around."
 
-Press [b]Space[/b] to drop an orb.
+[node name="Instruction2" type="BoxContainer" parent="Popup_Overlay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 30
 
-Match 2 of the same orb to increase your score and the size of the orbs."
+[node name="Bullet2" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("13_w44g7")
+expand_mode = 1
+
+[node name="BulletText2" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction2"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "Press [b]Space[/b] to drop an orb."
+
+[node name="Instruction3" type="BoxContainer" parent="Popup_Overlay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Bullet3" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction3"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("13_w44g7")
+expand_mode = 1
+
+[node name="BulletText3" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction3"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+text = "Match 2 of the same orb to grow their size."
 
 [connection signal="pressed" from="MainButtons/Start_Game" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Instructions" to="." method="_on_instructions_pressed"]
