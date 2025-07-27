@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dluajs14ulqc5" path="res://assets/orbs/Fire.png" id="2_x1t3y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aoevm"]
-radius = 105.475
+radius = 206.912
 
 [node name="orange" type="RigidBody2D"]
 script = ExtResource("1_0v70p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.8, 0.8)
+position = Vector2(-4, -15)
+scale = Vector2(1.53203, 1.53203)
 texture = ExtResource("2_x1t3y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

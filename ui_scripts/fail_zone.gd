@@ -1,4 +1,5 @@
 extends Area2D
+@onready var fail_overlay: Panel = $Fail_Popup
 
 var fruits_inside = []
 
@@ -21,4 +22,13 @@ func _physics_process(delta):
 			
 func fail_game():
 	#print("fail!")
+	var fail_overlay = get_node("../Fail_Popup")
+	if fail_overlay:
+		fail_overlay.visible = true
+	var menu_button = get_node("../InGame_MainMenu")
+	if menu_button:
+		menu_button.visible = false
+	var score = get_node("../Score")
+	if score:
+		score.visible = false
 	Globals.FAIL = true

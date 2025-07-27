@@ -4,16 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://du7aa3fhb61nu" path="res://assets/orbs/Duck.png" id="2_r5k5e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qvslh"]
-radius = 67.0
-height = 230.0
+radius = 137.0
+height = 458.0
 
 [node name="watermelon" type="RigidBody2D"]
 script = ExtResource("1_rhm2k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 45)
 rotation = -8.36357e-05
+scale = Vector2(2.06348, 2.06348)
 texture = ExtResource("2_r5k5e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-12, -1)
+position = Vector2(-8, 42)
 shape = SubResource("CapsuleShape2D_qvslh")
