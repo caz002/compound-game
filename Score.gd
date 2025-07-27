@@ -2,5 +2,5 @@ extends Label
 
 
 func _process(delta):
-	self.text = "Score: " + str(int(ScoreManager.score))
+	self.text = "Score: " + str(int(Globals.score))
 	

@@ -48,7 +48,7 @@ func merge_with(other: FruitBase):
 	
 	# Emit signal to add to score
 	var points = pow(2, fruit_id + 1) * 10
-	ScoreManager.add_score(points)
+	Globals.add_score(points)
 
 	# Defer deletion
 	call_deferred("queue_free")

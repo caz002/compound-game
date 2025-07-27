@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgnyfdf6tgy8n"]
+
+[ext_resource type="Script" uid="uid://bkswo224uanlo" path="res://fail_zone.gd" id="1_tbf52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8s5u"]
+size = Vector2(506, 96)
+
+[node name="fail_zone" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_tbf52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -38)
+shape = SubResource("RectangleShape2D_h8s5u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

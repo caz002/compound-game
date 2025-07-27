@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const PLAYER_SPEED = 4
-const DROP_COOLDOWN= 100
+const DROP_COOLDOWN= 50
 var _tick = 0
 var _waiting_to_spawn = false
 

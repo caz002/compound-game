@@ -59,7 +59,7 @@ uppercase = true
 script = ExtResource("6_ryrav")
 
 [node name="fail_zone" parent="." instance=ExtResource("7_eow3j")]
-position = Vector2(130, -99)
+position = Vector2(137, 318)
 
 [node name="FailBar" type="ProgressBar" parent="."]
 offset_left = -603.0
