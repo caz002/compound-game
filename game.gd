@@ -2,12 +2,15 @@ extends Node2D
 @onready var fail_overlay: Panel = $Fail_Popup
 @onready var main_menu_button = $Fail_Popup/Main_Menu_Button
 @onready var in_game_main_menu = $InGame_MainMenu
+@onready var fail_bar = $FailBar
 
 @export var tween_intensity: float
 @export var tween_duration: float
 
 func _ready():
 	fail_overlay.visible = false
+	in_game_main_menu.visible = true
+	fail_bar.visible = true
 	
 func _physics_process(delta):
 	if Input.is_action_just_pressed("close"):

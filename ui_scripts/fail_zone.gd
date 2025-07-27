@@ -1,5 +1,6 @@
 extends Area2D
 @onready var fail_overlay: Panel = $Fail_Popup
+@onready var fail_bar = $"../FailBar"
 
 var fruits_inside = []
 
@@ -25,10 +26,13 @@ func fail_game():
 	var fail_overlay = get_node("../Fail_Popup")
 	if fail_overlay:
 		fail_overlay.visible = true
-	var menu_button = get_node("../InGame_MainMenu")
-	if menu_button:
-		menu_button.visible = false
-	var score = get_node("../Score")
-	if score:
-		score.visible = false
+	#var menu_button = get_node("../InGame_MainMenu")
+	#if menu_button:
+		#menu_button.visible = false
+	#var score = get_node("../Score")
+	#if score:
+		#score.visible = false
+	#var fail_bar = get_node("../FailBar")
+	#if fail_bar:
+		#fail_bar.visible = false
 	Globals.FAIL = true

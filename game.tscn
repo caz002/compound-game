@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c2ar7y1vaqw1b"]
+[gd_scene load_steps=24 format=3 uid="uid://c2ar7y1vaqw1b"]
 
 [ext_resource type="PackedScene" uid="uid://gl1cf41av64a" path="res://ui_scenes/bucket.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://ba5utjfajrfpf" path="res://game.gd" id="1_fc0e3"]
@@ -71,10 +71,25 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc2xo"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06t4h"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_215e1"]
+bg_color = Color(0.596078, 0.729412, 0.686275, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -90,6 +105,36 @@ shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
 bg_color = Color(0.719238, 0.841074, 0.708252, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sc4i"]
+bg_color = Color(0.596078, 0.729412, 0.686275, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
+bg_color = Color(1, 1, 1, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -183,13 +228,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -183.5
-offset_top = -158.5
-offset_right = 183.5
-offset_bottom = 158.5
+offset_left = -188.0
+offset_top = -182.5
+offset_right = 188.0
+offset_bottom = 182.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Fail_Popup/VBoxContainer"]
@@ -215,7 +260,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.368627, 0.490196, 0.454902, 1)
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lc2xo")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("9_hve3p")
@@ -224,15 +269,15 @@ script = ExtResource("9_hve3p")
 custom_minimum_size = Vector2(40, 60)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0.368627, 0.490196, 0.454902, 1)
-theme_override_colors/font_color = Color(0.368627, 0.490196, 0.454902, 1)
-theme_override_colors/font_focus_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.368627, 0.490196, 0.454902, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_06t4h")
-theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_215e1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7sc4i")
 text = "Main Menu"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
