@@ -1,8 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://cb3pvwkg5tx10"]
+[gd_scene load_steps=23 format=3 uid="uid://cb3pvwkg5tx10"]
 
 [ext_resource type="Texture2D" uid="uid://d1f3qlv4e3b1m" path="res://assets/backgrounds/main_menu_background.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://bauagtsudmh2i" path="res://main_menu.gd" id="1_7vrkn"]
 [ext_resource type="AudioStream" uid="uid://dhqmbjcrug1lh" path="res://assets/music/button_click.mp3" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://5u1vp2b4au6i" path="res://assets/ui/Title.png" id="4_jix8l"]
+[ext_resource type="Texture2D" uid="uid://dluajs14ulqc5" path="res://assets/orbs/Fire.png" id="5_qe12f"]
+[ext_resource type="Texture2D" uid="uid://clx2pymlk4xgh" path="res://assets/orbs/Default_Black.png" id="6_8qtwp"]
+[ext_resource type="Script" uid="uid://37hyupppuo84" path="res://fire_orb.gd" id="6_dy7ct"]
+[ext_resource type="Script" uid="uid://bnqm3rnutawcp" path="res://black_orb.gd" id="7_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://cffkf25thtmpe" path="res://assets/orbs/Water.png" id="9_dy7ct"]
+[ext_resource type="Script" uid="uid://bhwwe655qd357" path="res://water_orb.gd" id="9_j5v2v"]
+[ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="10_0o4t1"]
+[ext_resource type="Script" uid="uid://bsl03yaq5xrbt" path="res://earth_orb.gd" id="11_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://cq36qcauo2o7v" path="res://assets/ui/Close.png" id="13_iotk1"]
+[ext_resource type="Texture2D" uid="uid://bh5gebhcm4hqc" path="res://assets/ui/BulletPoint.png" id="13_w44g7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
@@ -10,34 +21,76 @@ texture = ExtResource("1_06t4h")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06t4h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
-bg_color = Color(0.675721, 0.800632, 0.650764, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
 shadow_color = Color(0, 0, 0, 0.203922)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
-bg_color = Color(0.557038, 0.703477, 0.544758, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+bg_color = Color(0.719238, 0.841074, 0.708252, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
 shadow_color = Color(0, 0, 0, 0.203922)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
 shadow_color = Color(0, 0, 0, 0.203922)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+texture = ExtResource("4_jix8l")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w44g7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iotk1"]
+bg_color = Color(0.651537, 0.765499, 0.72897, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.462745, 0.592157, 0.552941, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -47,8 +100,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7vrkn")
+tween_intensity = 1.2
+tween_duration = 0.3
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Background" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,7 +112,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MainButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -65,20 +120,20 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -202.0
-offset_top = -115.5
+offset_top = -57.5
 offset_right = 202.0
-offset_bottom = 115.5
+offset_bottom = 281.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Start_Game" type="Button" parent="VBoxContainer"]
+[node name="Start_Game" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0.0666667, 0.101961, 0.054902, 1)
-theme_override_colors/font_color = Color(0.0666667, 0.101961, 0.054902, 1)
-theme_override_colors/font_focus_color = Color(0.0666667, 0.101961, 0.054902, 1)
-theme_override_colors/font_pressed_color = Color(0.0648364, 0.100075, 0.0561749, 1)
+theme_override_colors/font_hover_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_color = Color(0.370198, 0.488491, 0.452989, 1)
+theme_override_colors/font_focus_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_pressed_color = Color(0.368627, 0.490196, 0.454902, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_06t4h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
@@ -86,13 +141,27 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 text = "Start Game"
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
+[node name="Instructions" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.0743903, 0.112411, 0.0650451, 1)
+theme_override_colors/font_hover_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_focus_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_pressed_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_06t4h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "How to Play"
+
+[node name="Exit" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_focus_color = Color(0.368627, 0.490196, 0.454902, 1)
+theme_override_colors/font_pressed_color = Color(0.368627, 0.490196, 0.454902, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_06t4h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
@@ -104,5 +173,205 @@ text = "Exit"
 stream = ExtResource("3_fu7sn")
 volume_db = 0.415
 
-[connection signal="pressed" from="VBoxContainer/Start_Game" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[node name="Fire Orb" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1267.0
+offset_top = 438.0
+offset_right = 1523.0
+offset_bottom = 694.0
+rotation = 0.329867
+texture = ExtResource("5_qe12f")
+script = ExtResource("6_dy7ct")
+
+[node name="Black Orb" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 545.0
+offset_right = 353.0
+offset_bottom = 801.0
+rotation = -0.329867
+texture = ExtResource("6_8qtwp")
+script = ExtResource("7_dy7ct")
+
+[node name="Water Orb" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1281.0
+offset_top = 45.0
+offset_right = 1404.0
+offset_bottom = 160.0
+rotation = 0.349066
+texture = ExtResource("9_dy7ct")
+expand_mode = 1
+script = ExtResource("9_j5v2v")
+
+[node name="Title" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -340.0
+offset_top = 134.0
+offset_right = 340.0
+offset_bottom = 269.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_glbon")
+
+[node name="Earth Orb" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 287.0
+offset_right = 353.0
+offset_bottom = 405.0
+rotation = -0.174533
+texture = ExtResource("10_0o4t1")
+expand_mode = 1
+script = ExtResource("11_0k4wn")
+
+[node name="Popup_Overlay" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -497.0
+offset_top = -268.0
+offset_right = 501.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w44g7")
+
+[node name="Back" type="TextureButton" parent="Popup_Overlay"]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 48.0
+offset_right = 935.0
+offset_bottom = 86.0
+texture_normal = ExtResource("13_iotk1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Title" type="Label" parent="Popup_Overlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -206.0
+offset_right = 155.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_iotk1")
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Paragraph" type="Label" parent="Popup_Overlay"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -373.0
+offset_top = -534.0
+offset_right = 374.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/font_size = 32
+text = "Use WASD to move around.
+
+Press Space to drop an orb.
+
+Match 2 of the same orb to increase your score and the size of the orbs."
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup_Overlay"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 208.0
+offset_right = 866.0
+offset_bottom = 458.0
+theme_override_constants/separation = 50
+
+[node name="Instruction1" type="BoxContainer" parent="Popup_Overlay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Bullet1" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction1"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("13_w44g7")
+expand_mode = 1
+
+[node name="BulletText1" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction1"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "Use [b]WASD[/b] to move around."
+
+[node name="Instruction2" type="BoxContainer" parent="Popup_Overlay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Bullet2" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("13_w44g7")
+expand_mode = 1
+
+[node name="BulletText2" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction2"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "Press [b]Space[/b] to drop an orb."
+
+[node name="Instruction3" type="BoxContainer" parent="Popup_Overlay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Bullet3" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction3"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("13_w44g7")
+expand_mode = 1
+
+[node name="BulletText3" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction3"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.462745, 0.592157, 0.552941, 1)
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+text = "Match 2 of the same orb to grow their size."
+
+[connection signal="pressed" from="MainButtons/Start_Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButtons/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="MainButtons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Popup_Overlay/Back" to="." method="_on_back_pressed"]

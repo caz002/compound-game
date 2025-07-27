@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c8jeadyfdtgm1"]
 
-[ext_resource type="Script" uid="uid://da58fdg84jghn" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://c7kt6pj00rnsm" path="res://assets/ui/arrow.png" id="2_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://cffkf25thtmpe" path="res://assets/orbs/Water.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="4_2hs0m"]
