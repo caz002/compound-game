@@ -1,22 +1,22 @@
 [gd_scene load_steps=23 format=3 uid="uid://cb3pvwkg5tx10"]
 
-[ext_resource type="Texture2D" uid="uid://d1f3qlv4e3b1m" path="res://assets/backgrounds/main_menu_background.png" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://bauagtsudmh2i" path="res://main_menu.gd" id="1_7vrkn"]
-[ext_resource type="AudioStream" uid="uid://dhqmbjcrug1lh" path="res://assets/music/button_click.mp3" id="3_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://5u1vp2b4au6i" path="res://assets/ui/Title.png" id="4_jix8l"]
-[ext_resource type="Texture2D" uid="uid://dluajs14ulqc5" path="res://assets/orbs/Fire.png" id="5_qe12f"]
-[ext_resource type="Texture2D" uid="uid://clx2pymlk4xgh" path="res://assets/orbs/Default_Black.png" id="6_8qtwp"]
-[ext_resource type="Script" uid="uid://37hyupppuo84" path="res://fire_orb.gd" id="6_dy7ct"]
-[ext_resource type="Script" uid="uid://bnqm3rnutawcp" path="res://black_orb.gd" id="7_dy7ct"]
-[ext_resource type="Texture2D" uid="uid://cffkf25thtmpe" path="res://assets/orbs/Water.png" id="9_dy7ct"]
-[ext_resource type="Script" uid="uid://bhwwe655qd357" path="res://water_orb.gd" id="9_j5v2v"]
-[ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="10_0o4t1"]
-[ext_resource type="Script" uid="uid://bsl03yaq5xrbt" path="res://earth_orb.gd" id="11_0k4wn"]
-[ext_resource type="Texture2D" uid="uid://cq36qcauo2o7v" path="res://assets/ui/Close.png" id="13_iotk1"]
-[ext_resource type="Texture2D" uid="uid://bh5gebhcm4hqc" path="res://assets/ui/BulletPoint.png" id="13_w44g7"]
+[ext_resource type="Script" uid="uid://bauagtsudmh2i" path="res://ui_scripts/main_menu.gd" id="1_rdqtg"]
+[ext_resource type="Texture2D" uid="uid://d1f3qlv4e3b1m" path="res://assets/backgrounds/main_menu_background.png" id="2_s1vn0"]
+[ext_resource type="AudioStream" uid="uid://dhqmbjcrug1lh" path="res://assets/music/button_click.mp3" id="3_4vb3c"]
+[ext_resource type="Texture2D" uid="uid://dluajs14ulqc5" path="res://assets/orbs/Fire.png" id="4_771lb"]
+[ext_resource type="Script" uid="uid://37hyupppuo84" path="res://fire_orb.gd" id="5_dhyex"]
+[ext_resource type="Texture2D" uid="uid://clx2pymlk4xgh" path="res://assets/orbs/Default_Black.png" id="6_qorea"]
+[ext_resource type="Script" uid="uid://bnqm3rnutawcp" path="res://black_orb.gd" id="7_0bd7w"]
+[ext_resource type="Texture2D" uid="uid://cffkf25thtmpe" path="res://assets/orbs/Water.png" id="8_0mi3c"]
+[ext_resource type="Script" uid="uid://bhwwe655qd357" path="res://water_orb.gd" id="9_if0yb"]
+[ext_resource type="Texture2D" uid="uid://5u1vp2b4au6i" path="res://assets/ui/Title.png" id="10_h7doc"]
+[ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="11_6do43"]
+[ext_resource type="Script" uid="uid://bsl03yaq5xrbt" path="res://earth_orb.gd" id="12_3f8vt"]
+[ext_resource type="Texture2D" uid="uid://cq36qcauo2o7v" path="res://assets/ui/Close.png" id="13_ijsr1"]
+[ext_resource type="Texture2D" uid="uid://bh5gebhcm4hqc" path="res://assets/ui/BulletPoint.png" id="14_2kdpp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
-texture = ExtResource("1_06t4h")
+texture = ExtResource("2_s1vn0")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06t4h"]
 
@@ -66,7 +66,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
-texture = ExtResource("4_jix8l")
+texture = ExtResource("10_h7doc")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w44g7"]
 bg_color = Color(1, 1, 1, 1)
@@ -99,7 +99,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7vrkn")
+script = ExtResource("1_rdqtg")
 tween_intensity = 1.2
 tween_duration = 0.3
 
@@ -170,7 +170,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 text = "Exit"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_fu7sn")
+stream = ExtResource("3_4vb3c")
 volume_db = 0.415
 
 [node name="Fire Orb" type="TextureRect" parent="."]
@@ -180,8 +180,8 @@ offset_top = 438.0
 offset_right = 1523.0
 offset_bottom = 694.0
 rotation = 0.329867
-texture = ExtResource("5_qe12f")
-script = ExtResource("6_dy7ct")
+texture = ExtResource("4_771lb")
+script = ExtResource("5_dhyex")
 
 [node name="Black Orb" type="TextureRect" parent="."]
 layout_mode = 0
@@ -190,8 +190,8 @@ offset_top = 545.0
 offset_right = 353.0
 offset_bottom = 801.0
 rotation = -0.329867
-texture = ExtResource("6_8qtwp")
-script = ExtResource("7_dy7ct")
+texture = ExtResource("6_qorea")
+script = ExtResource("7_0bd7w")
 
 [node name="Water Orb" type="TextureRect" parent="."]
 layout_mode = 0
@@ -200,9 +200,9 @@ offset_top = 45.0
 offset_right = 1404.0
 offset_bottom = 160.0
 rotation = 0.349066
-texture = ExtResource("9_dy7ct")
+texture = ExtResource("8_0mi3c")
 expand_mode = 1
-script = ExtResource("9_j5v2v")
+script = ExtResource("9_if0yb")
 
 [node name="Title" type="Panel" parent="."]
 layout_mode = 1
@@ -223,9 +223,9 @@ offset_top = 287.0
 offset_right = 353.0
 offset_bottom = 405.0
 rotation = -0.174533
-texture = ExtResource("10_0o4t1")
+texture = ExtResource("11_6do43")
 expand_mode = 1
-script = ExtResource("11_0k4wn")
+script = ExtResource("12_3f8vt")
 
 [node name="Popup_Overlay" type="Panel" parent="."]
 layout_mode = 1
@@ -248,7 +248,7 @@ offset_left = 895.0
 offset_top = 48.0
 offset_right = 935.0
 offset_bottom = 86.0
-texture_normal = ExtResource("13_iotk1")
+texture_normal = ExtResource("13_ijsr1")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -311,7 +311,7 @@ theme_override_constants/separation = 30
 [node name="Bullet1" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction1"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-texture = ExtResource("13_w44g7")
+texture = ExtResource("14_2kdpp")
 expand_mode = 1
 
 [node name="BulletText1" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction1"]
@@ -334,7 +334,7 @@ theme_override_constants/separation = 30
 [node name="Bullet2" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction2"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-texture = ExtResource("13_w44g7")
+texture = ExtResource("14_2kdpp")
 expand_mode = 1
 
 [node name="BulletText2" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction2"]
@@ -357,7 +357,7 @@ theme_override_constants/separation = 30
 [node name="Bullet3" type="TextureRect" parent="Popup_Overlay/VBoxContainer/Instruction3"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-texture = ExtResource("13_w44g7")
+texture = ExtResource("14_2kdpp")
 expand_mode = 1
 
 [node name="BulletText3" type="RichTextLabel" parent="Popup_Overlay/VBoxContainer/Instruction3"]

@@ -23,7 +23,13 @@ var _current_fruit
 var _current_fruit_id
 
 func _pick_random_fruit():
-	return _rng.randi_range(0,2)
+	var rand = _rng.randf()
+	if rand < 0.5:
+		return 0
+	elif rand < 0.8:
+		return 1
+	else:
+		return 2
 
 func _set_up_list():
 	_fruit_list = [
@@ -37,6 +43,11 @@ func _ready():
 	_spawn_new_fruit()
 
 func _physics_process(delta: float) -> void:
+	
+	if Globals.FAIL:
+		_current_fruit.hide()
+		return
+	
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("left"):
 		direction.x -= 1

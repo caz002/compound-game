@@ -1,20 +1,21 @@
 [gd_scene load_steps=3 format=3 uid="uid://gl1cf41av64a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvbsc"]
-size = Vector2(20, 782.748)
+size = Vector2(20, 923.031)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgj3b"]
 size = Vector2(528.5, 20)
 
 [node name="Bucket" type="StaticBody2D"]
+collision_layer = 3
 
 [node name="LeftWall" type="CollisionShape2D" parent="."]
-position = Vector2(-143.058, 203.376)
+position = Vector2(-143.082, 170.969)
 rotation = -0.000739264
 shape = SubResource("RectangleShape2D_yvbsc")
 
 [node name="RightWall" type="CollisionShape2D" parent="."]
-position = Vector2(406, 211.25)
+position = Vector2(406, 173.516)
 shape = SubResource("RectangleShape2D_yvbsc")
 
 [node name="Ground" type="CollisionShape2D" parent="."]

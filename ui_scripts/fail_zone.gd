@@ -1,10 +1,8 @@
 extends Area2D
 
-# Inside Area2D
 var fruits_inside = []
 
 func _on_body_entered(body):
-	#print("Entered:", body)
 	if body is FruitBase:
 		if body not in fruits_inside:
 			fruits_inside.append(body)
@@ -22,4 +20,5 @@ func _physics_process(delta):
 		Globals.clear_fail_timer()
 			
 func fail_game():
-	print("fail!")
+	#print("fail!")
+	Globals.FAIL = true

@@ -2,6 +2,6 @@ extends FruitBase
 
 func _ready():
 	_init()
-	fruit_id = SUIKA.FRUITS.PEAR
+	fruit_id = Globals.FRUITS.WATERMELON
 	await get_tree().create_timer(0.2).timeout
 	_active = true

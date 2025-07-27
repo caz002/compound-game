@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://dimfkesgwlxsr"]
 
-[ext_resource type="Script" uid="uid://bvflk2ywih56x" path="res://fruits/watermelon.gd" id="1_6apsg"]
-[ext_resource type="Texture2D" uid="uid://du7aa3fhb61nu" path="res://assets/orbs/Duck.png" id="2_qvslh"]
+[ext_resource type="Script" uid="uid://bvflk2ywih56x" path="res://orb_scripts/watermelon.gd" id="1_rhm2k"]
+[ext_resource type="Texture2D" uid="uid://du7aa3fhb61nu" path="res://assets/orbs/Duck.png" id="2_r5k5e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qvslh"]
 radius = 67.0
 height = 230.0
 
 [node name="watermelon" type="RigidBody2D"]
-script = ExtResource("1_6apsg")
+script = ExtResource("1_rhm2k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -8.36357e-05
-texture = ExtResource("2_qvslh")
+texture = ExtResource("2_r5k5e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-12, -1)

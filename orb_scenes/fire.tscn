@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhxu731i1q1i4"]
 
-[ext_resource type="Script" uid="uid://d1isddhj3v7fd" path="res://fruits/orange.gd" id="1_aoevm"]
-[ext_resource type="Texture2D" uid="uid://dluajs14ulqc5" path="res://assets/orbs/Fire.png" id="2_uo15y"]
+[ext_resource type="Script" uid="uid://d1isddhj3v7fd" path="res://orb_scripts/orange.gd" id="1_0v70p"]
+[ext_resource type="Texture2D" uid="uid://dluajs14ulqc5" path="res://assets/orbs/Fire.png" id="2_x1t3y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aoevm"]
 radius = 105.475
 
 [node name="orange" type="RigidBody2D"]
-script = ExtResource("1_aoevm")
+script = ExtResource("1_0v70p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_uo15y")
+texture = ExtResource("2_x1t3y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 18)

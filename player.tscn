@@ -1,13 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8jeadyfdtgm1"]
+[gd_scene load_steps=8 format=3 uid="uid://c8jeadyfdtgm1"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://da58fdg84jghn" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://c7kt6pj00rnsm" path="res://assets/ui/arrow.png" id="2_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://cffkf25thtmpe" path="res://assets/orbs/Water.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bt1fiaq1snps7" path="res://assets/orbs/Earth.png" id="4_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://dt68un4o2ykte" path="res://assets/orbs/Default_White.png" id="5_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://clx2pymlk4xgh" path="res://assets/orbs/Default_Black.png" id="6_1jxqw"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hs0m"]
+radius = 19.0
+height = 74.0
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_onrkg")
 
 [node name="Player" type="Sprite2D" parent="."]
@@ -35,3 +41,8 @@ visible = false
 rotation = 0.000880671
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("6_1jxqw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -115)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_2hs0m")
