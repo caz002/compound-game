@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://clx2pymlk4xgh" path="res://assets/orbs/Default_Black.png" id="2_a0myn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yahxr"]
-radius = 106.005
+radius = 166.875
 
 [node name="lemon" type="RigidBody2D"]
 script = ExtResource("1_ot8xj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -16)
-scale = Vector2(0.6, 0.6)
+position = Vector2(9.53674e-07, -26)
+scale = Vector2(0.982031, 0.982031)
 texture = ExtResource("2_a0myn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

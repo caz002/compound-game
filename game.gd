@@ -1,5 +1,14 @@
 extends Node2D
+@onready var fail_overlay: Panel = $Fail_Popup
+@onready var main_menu_button = $Fail_Popup/Main_Menu_Button
+@onready var in_game_main_menu = $InGame_MainMenu
 
+@export var tween_intensity: float
+@export var tween_duration: float
+
+func _ready():
+	fail_overlay.visible = false
+	
 func _physics_process(delta):
 	if Input.is_action_just_pressed("close"):
 		get_tree().quit()
@@ -87,3 +96,30 @@ func _toss_all_orbs_upwards(toss_strength_min: float = 100.0, toss_strength_max:
 
 		orb.apply_central_impulse(toss_vector)
 		orb.angular_velocity += randf_range(-10.0, 10.0)
+
+# Functions for End game overlay
+func _on_main_menu_button_pressed():
+	$Click.play()
+	await get_tree().create_timer(0.3).timeout
+	get_tree().change_scene_to_file("res://ui_scenes/main_menu.tscn")
+	Globals.score = 0
+
+func _on_in_game_main_menu_pressed():
+	$Click.play()
+	await get_tree().create_timer(0.3).timeout
+	get_tree().change_scene_to_file("res://ui_scenes/main_menu.tscn")
+	Globals.score = 0
+
+func _process(delta:float) -> void:
+	#btn_hovered(main_menu_button)
+	btn_hovered(in_game_main_menu)
+func start_tween(object: Object, property: String, final_val : Variant, duration: float):
+	var tween = create_tween()
+	tween.tween_property(object, property, final_val, duration)
+
+func btn_hovered(button: Button):
+	button.pivot_offset = button.size/2
+	if button.is_hovered():
+		start_tween(button, "scale", Vector2.ONE * tween_intensity, tween_duration)
+	else:
+		start_tween(button, "scale", Vector2.ONE, tween_duration)
