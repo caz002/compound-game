@@ -1,4 +1,5 @@
-# compound-game
+# Orbits
+Project for submission to 2025 Melon Game Jam.
 
 # Assets
 
