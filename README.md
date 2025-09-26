@@ -1,5 +1,10 @@
 # Orbits
-Project for submission to 2025 Melon Game Jam.
+Puzzle game where users are challenged to combine different objects in a limited time frame. Submitted to Melon Jam 6, a 72-hour game jam.
+
+[Click Here to Play](https://cza47.itch.io/orbits)
+
+# Development
+Game created using Godot and GDScript. Sprite and UI assets were created in Figma and Procreate.
 
 # Assets
 
